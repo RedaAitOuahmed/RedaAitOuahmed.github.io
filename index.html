@@ -1,0 +1,103 @@
+
+     <!DOCTYPE html>
+     <html>
+       <head>
+           <!-- Importing some style -->
+           <link type="text/css" rel="stylesheet" href="css/mainStyle.css">
+           <!--Import Google Icon Font-->
+           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+           <!--Import materialize.css-->
+           <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+   
+           <!--Let browser know website is optimized for mobile-->
+           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+           <!-- Importing scripts so that it works well-->
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+           <script type="text/javascript" src="js/materialize.min.js"></script>
+           <script src="fetch_food_api.js"></script>
+   
+   
+         <title>MIAMSH</title>
+   
+       </head>
+   
+       <body>
+           <p align="center">
+           <img src="logo.png"  height=150 =  width=400 ></a>
+             </p>
+   
+           <p class="description">
+               MIAMSH est votre nouvel allié minceur! Alliant simplicité et efficacité, laissez vous tenter par son utilisation.
+               Son objectif est simple : vous faire <b>mincir</b> de façon durable, tout en vous apprenant à manger équilibré.
+               Pour cela rentrez le menu de votre repas en indiquant tous les ingrédients et leur quantité,
+               MIAMSH vous dira le nombre de <b>calories</b>, et le temps nécessaire de pratique de <b>sport</b> pour  les éliminer toutes.
+           </p>
+           <br/>
+           <div id="search_ingredient_forms_container">
+                 <form class="search_ingredient"  id="search_form_ingredient_1">
+                 </form >
+   
+           </div>
+           <div class="row">
+               <form  id="ingredients_form" class="col s12">
+   
+               </form>
+   
+           </div>
+   
+           <br>
+           <div class="center">
+               <button  id="add_ingredient" class="btn waves-effect waves-light" type="reset" name="action">Ajouter un ingrédient
+                   <i class="material-icons left">add_box</i>
+               </button>
+               <br/>
+               <br/>
+   
+               <div class="row">
+                   <form  id="weight_form" class="col s12">
+                       <div class="input-field col s12">
+                           <input required id="weight_input" value="70"  type="number"  min="5" step="0.01" class="validate">
+                           <label for="weight_input">Votre poids (Kg) </label>
+                       </div>
+                   </form>
+   
+               </div>
+   
+                <button class="btn waves-effect waves-light centere" type="submit" name="action" id="submit_ingredients">Envoyer
+                       <i class="material-icons right">send</i>
+                </button>
+           </div>
+   
+   
+   
+   
+   
+           <div id="recipe_calories">
+               <h4> Votre recette en calories </h4>
+               <h5 id="total_calories_title"></h5>
+               <table id="calories_table" class="striped">
+                   <thead>
+                       <tr>
+                           <th>Produit</th>
+                           <th>Quantité ( ml ou g)</th>
+                           <th>Calories (Cal)</th>
+                           <th>Calories (Kj)</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+   
+                   </tbody>
+               </table>
+           </div>
+           <br/>
+           <br/>
+           <hr>
+           <br/>
+           <h5 id="sports_calories_table_title"> Voici le temps nécessaire de chaque sport pour éliminer las calories contenues dans votre recette</h5>
+            <div id="calories_sports">
+   
+   
+            </div>
+       </body>
+     </html>
